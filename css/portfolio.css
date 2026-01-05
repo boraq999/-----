@@ -1,14 +1,4 @@
-/* CSS خاص بقسم المعرض / أعمالنا */
-.portfolio {
-    padding: 2rem 0;
-}
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
-}
-
-/* أعمالنا - كامل */
+/* ------------------------- أعمالنا ------------------------- */
 .portfolio {
     position: relative;
     direction: rtl;
@@ -24,6 +14,7 @@
     pointer-events: none;
 }
 
+/* Ripple background for portfolio */
 .portfolio-bg-ripple {
     position: absolute;
     inset: 0;
@@ -60,13 +51,16 @@ body.dark .portfolio-radial-overlay {
     background: radial-gradient(ellipse at center, rgba(59,130,246,0.05) 0%, transparent 70%);
 }
 
+/* tweak stroke colors for dark mode if desired */
 body.dark .portfolio-bg-ripple svg .center-r1 { stroke: rgba(59,130,246,0.20); }
 body.dark .portfolio-bg-ripple svg .center-r2 { stroke: rgba(139,92,246,0.18); }
 body.dark .portfolio-bg-ripple svg .center-r3 { stroke: rgba(236,72,153,0.16); }
 
+/* Ensure portfolio content appears above the ripple */
 .portfolio .portfolio-title,
 .portfolio .portfolio-grid { position: relative; z-index: 2; }
 
+/* Neumorphism background + utility shadow */
 .neumorphism-bg {
     position: absolute; /* confined to parent .portfolio */
     inset: 0;
@@ -94,12 +88,14 @@ body.dark .portfolio-bg-ripple svg .center-r3 { stroke: rgba(236,72,153,0.16); }
     box-shadow: 20px 20px 60px #d1d1d1, -20px -20px 60px #ffffff;
 }
 
+/* Ensure portfolio content stacks above the bg */
 .portfolio .portfolio-title,
 .portfolio .portfolio-grid {
     position: relative;
     z-index: 2;
 }
 
+/* New layered wave background wrapper for portfolio (provided SVG) */
 .portfolio-bg-wrapper {
     position: absolute;
     inset: 0;
@@ -117,6 +113,7 @@ body.dark .portfolio-bg-ripple svg .center-r3 { stroke: rgba(236,72,153,0.16); }
     opacity: 0.2;
 }
 
+/* fill color utilities (approximate Tailwind blues) */
 .fill-blue-100 { fill: #ebf8ff; }
 .fill-blue-200 { fill: #bee3f8; }
 .fill-blue-300 { fill: #90cdf4; }
@@ -125,6 +122,7 @@ body.dark .portfolio-bg-ripple svg .center-r3 { stroke: rgba(236,72,153,0.16); }
 .fill-blue-600 { fill: #3182ce; }
 .fill-blue-700 { fill: #2b6cb0; }
 
+/* Dark mode support: add class "dark" on <body> to enable */
 body.dark .portfolio-bg-wrapper { background: #0f172a; }
 body.dark .portfolio-bg-svg { opacity: 0.28; }
 body.dark .fill-blue-100 { fill: rgba(15, 23, 42, 0.30); }
@@ -186,6 +184,7 @@ body.dark .fill-blue-700 { fill: rgba(15, 23, 42, 0.6); }
     margin: 0 auto;
 }
 
+/* Two-column layout: text left, cards right */
 .portfolio-content {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
@@ -283,4 +282,3 @@ body.dark .fill-blue-700 { fill: rgba(15, 23, 42, 0.6); }
     .portfolio-left .portfolio-header { text-align: center; }
     .portfolio-grid { grid-template-columns: 1fr; }
 }
-
