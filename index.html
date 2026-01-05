@@ -9,7 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/clients-banner.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/why-us.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/base.css">
 </head>
 
 <body>
@@ -25,18 +31,21 @@
     <section class="landing">
         <svg class="landing-bg-pattern" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <pattern id="landing-hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
-                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" fill="none" stroke="#667eea" stroke-width="1" opacity="0.4"/>
-                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" transform="translate(50, 25.9)" fill="none" stroke="#764ba2" stroke-width="1" opacity="0.4"/>
+                <pattern id="landing-hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse"
+                    patternTransform="scale(2)">
+                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" fill="none" stroke="#667eea"
+                        stroke-width="1" opacity="0.4" />
+                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" transform="translate(50, 25.9)"
+                        fill="none" stroke="#764ba2" stroke-width="1" opacity="0.4" />
                 </pattern>
                 <linearGradient id="landing-hex-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#667eea" stop-opacity="0.1"/>
-                    <stop offset="50%" stop-color="#764ba2" stop-opacity="0.51"/>
-                    <stop offset="100%" stop-color="#667eea" stop-opacity="0.1"/>
+                    <stop offset="0%" stop-color="#667eea" stop-opacity="0.1" />
+                    <stop offset="50%" stop-color="#764ba2" stop-opacity="0.51" />
+                    <stop offset="100%" stop-color="#667eea" stop-opacity="0.1" />
                 </linearGradient>
             </defs>
-            <rect width="100%" height="100%" fill="url(#landing-hexagons)"/>
-            <rect width="100%" height="100%" fill="url(#landing-hex-gradient)"/>
+            <rect width="100%" height="100%" fill="url(#landing-hexagons)" />
+            <rect width="100%" height="100%" fill="url(#landing-hex-gradient)" />
         </svg>
         <div class="right">
             <!-- <img src="images/صورة أجهزة بدون خلفية.png" alt="أجهزة"> -->
@@ -69,62 +78,65 @@
     <section class="sections-wrapper">
         <svg class="sections-bg-pattern" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <defs>
-                <pattern id="sections-hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
-                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" fill="none" stroke="#667eea" stroke-width="1" opacity="0.4"/>
-                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" transform="translate(50, 25.9)" fill="none" stroke="#764ba2" stroke-width="1" opacity="0.4"/>
+                <pattern id="sections-hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse"
+                    patternTransform="scale(2)">
+                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" fill="none" stroke="#667eea"
+                        stroke-width="1" opacity="0.4" />
+                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" transform="translate(50, 25.9)"
+                        fill="none" stroke="#764ba2" stroke-width="1" opacity="0.4" />
                 </pattern>
                 <linearGradient id="sections-hex-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#667eea" stop-opacity="0.1"/>
-                    <stop offset="50%" stop-color="#764ba2" stop-opacity="0.1"/>
-                    <stop offset="100%" stop-color="#667eea" stop-opacity="0.1"/>
+                    <stop offset="0%" stop-color="#667eea" stop-opacity="0.1" />
+                    <stop offset="50%" stop-color="#764ba2" stop-opacity="0.1" />
+                    <stop offset="100%" stop-color="#667eea" stop-opacity="0.1" />
                 </linearGradient>
             </defs>
-            <rect width="100%" height="100%" fill="url(#sections-hexagons)"/>
-            <rect width="100%" height="100%" fill="url(#sections-hex-gradient)"/>
+            <rect width="100%" height="100%" fill="url(#sections-hexagons)" />
+            <rect width="100%" height="100%" fill="url(#sections-hex-gradient)" />
         </svg>
 
         <div class="services">
             <h2 class="services-title">حلول تقنية متكاملة</h2>
-            
+
             <div class="cards-container">
-            <div class="card">
-                <div class="top-section">
-                    <div class="logo">CLOUD</div>
-                    <img src="images/الخدمات/ايكون استضافة.png" alt="استضافة">
+                <div class="card">
+                    <div class="top-section">
+                        <div class="logo">CLOUD</div>
+                        <img src="images/الخدمات/ايكون استضافة.png" alt="استضافة">
+                    </div>
+                    <div class="bottom-section">
+                        <span class="title">استضافة</span>
+                        <span class="sub-title">
+                            استضافة سحابية آمنة وسريعة مع حماية متقدمة لبياناتك وضمان توفر خدماتك على مدار الساعة
+                        </span>
+                    </div>
                 </div>
-                <div class="bottom-section">
-                    <span class="title">استضافة</span>
-                    <span class="sub-title">
-                        استضافة سحابية آمنة وسريعة مع حماية متقدمة لبياناتك وضمان توفر خدماتك على مدار الساعة
-                    </span>
-                </div>
-            </div>
 
-            <div class="card">
-                <div class="top-section">
-                    <div class="logo">DESIGN</div>
-                    <img src="images/الخدمات/ايكون تصميم UI UX.png" alt="تصميم UI/UX">
+                <div class="card">
+                    <div class="top-section">
+                        <div class="logo">DESIGN</div>
+                        <img src="images/الخدمات/ايكون تصميم UI UX.png" alt="تصميم UI/UX">
+                    </div>
+                    <div class="bottom-section">
+                        <span class="title">تصميم UI/UX</span>
+                        <span class="sub-title">
+                            نصمم تجارب مستخدم استثنائية تجمع بين الجمال والوظيفة لتحقيق أفضل تفاعل مع عملائك
+                        </span>
+                    </div>
                 </div>
-                <div class="bottom-section">
-                    <span class="title">تصميم UI/UX</span>
-                    <span class="sub-title">
-                        نصمم تجارب مستخدم استثنائية تجمع بين الجمال والوظيفة لتحقيق أفضل تفاعل مع عملائك
-                    </span>
-                </div>
-            </div>
 
-            <div class="card">
-                <div class="top-section">
-                    <div class="logo">CODE</div>
-                    <img src="images/الخدمات/ايكون تطوير مواقع.png" alt="تطوير المواقع">
+                <div class="card">
+                    <div class="top-section">
+                        <div class="logo">CODE</div>
+                        <img src="images/الخدمات/ايكون تطوير مواقع.png" alt="تطوير المواقع">
+                    </div>
+                    <div class="bottom-section">
+                        <span class="title">تطوير المواقع</span>
+                        <span class="sub-title">
+                            نبني مواقع ويب احترافية سريعة وآمنة باستخدام أحدث التقنيات لتحقيق أهدافك الرقمية
+                        </span>
+                    </div>
                 </div>
-                <div class="bottom-section">
-                    <span class="title">تطوير المواقع</span>
-                    <span class="sub-title">
-                        نبني مواقع ويب احترافية سريعة وآمنة باستخدام أحدث التقنيات لتحقيق أهدافك الرقمية
-                    </span>
-                </div>
-            </div>
             </div>
         </div>
 
@@ -133,7 +145,7 @@
                 <img src="images/LOGO.png" alt="لوغو">
                 <h2 class="why-us-title">لماذا تختارنا</h2>
             </div>
-            
+
             <div class="why-us-right">
                 <div class="why-us-cards-container">
                     <div class="why-us-card">
@@ -143,7 +155,8 @@
                         </div>
                         <div class="why-us-bottom-section">
                             <span class="why-us-title-text">الحماية</span>
-                            <span class="why-us-sub-title">حماية متقدمة لبياناتك مع أنظمة أمان متطورة وتشفير قوي لضمان خصوصيتك</span>
+                            <span class="why-us-sub-title">حماية متقدمة لبياناتك مع أنظمة أمان متطورة وتشفير قوي لضمان
+                                خصوصيتك</span>
                         </div>
                     </div>
 
@@ -154,7 +167,8 @@
                         </div>
                         <div class="why-us-bottom-section">
                             <span class="why-us-title-text">سرعة في التنفيذ</span>
-                            <span class="why-us-sub-title">إنجاز سريع وفعال لمشاريعك مع التزام تام بالمواعيد المحددة</span>
+                            <span class="why-us-sub-title">إنجاز سريع وفعال لمشاريعك مع التزام تام بالمواعيد
+                                المحددة</span>
                         </div>
                     </div>
 
@@ -180,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="why-us-description-box">
                     <p>نقدم حلولاً تقنية متكاملة مع فريق محترف وخبرة واسعة لتحقيق أهدافك الرقمية</p>
                 </div>
@@ -188,68 +202,80 @@
         </div>
     </section>
 
-        <section class="portfolio">
-                <div class="portfolio-bg-ripple">
-                    <div class="stripe-overlay" style="background-image: repeating-linear-gradient(-45deg, #3b82f6 0px, #3b82f6 1px, transparent 1px, transparent 10px, #8b5cf6 10px, #8b5cf6 11px, transparent 11px, transparent 20px, #ec4899 20px, #ec4899 21px, transparent 21px, transparent 30px); background-size: 42.4px 42.4px;"></div>
-                    <div class="portfolio-radial-overlay"></div>
-                </div>
+    <section class="portfolio">
+        <div class="portfolio-bg-ripple">
+            <div class="stripe-overlay"
+                style="background-image: repeating-linear-gradient(-45deg, #3b82f6 0px, #3b82f6 1px, transparent 1px, transparent 10px, #8b5cf6 10px, #8b5cf6 11px, transparent 11px, transparent 20px, #ec4899 20px, #ec4899 21px, transparent 21px, transparent 30px); background-size: 42.4px 42.4px;">
+            </div>
+            <div class="portfolio-radial-overlay"></div>
+        </div>
 
-                <div class="portfolio-content">
-                    <div class="portfolio-left">
-                        <div class="portfolio-header">
-                            <h2 class="portfolio-title">أعمالنا</h2>
-                            <p class="portfolio-subtitle">نماذج مختارة من مشاريعنا الرقمية — جودة، تصميم ونتائج ملموسة</p>
+        <div class="portfolio-content">
+            <div class="portfolio-left">
+                <div class="portfolio-header">
+                    <h2 class="portfolio-title">أعمالنا</h2>
+                    <p class="portfolio-subtitle">نماذج مختارة من مشاريعنا الرقمية — جودة، تصميم ونتائج ملموسة</p>
+                </div>
+            </div>
+
+            <div class="portfolio-right">
+                <div class="portfolio-grid">
+                    <a href="https://sipes.ly/" target="_blank" class="portfolio-card">
+                        <div class="portfolio-mockup">
+                            <img src="images/portfolio/sipes.ly.png" alt="Sipes">
+                            <div class="mockup-badge">WEB</div>
                         </div>
-                    </div>
-
-                    <div class="portfolio-right">
-                        <div class="portfolio-grid">
-            <a href="https://sipes.ly/" target="_blank" class="portfolio-card">
-                <div class="portfolio-mockup">
-                    <img src="images/portfolio/sipes.ly.png" alt="Sipes">
-                    <div class="mockup-badge">WEB</div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>Sipes</h3>
-                    <p>موقع شركة احترافي متكامل</p>
-                </div>
-            </a>
-
-            <a href="https://tetco.ly/" target="_blank" class="portfolio-card">
-                <div class="portfolio-mockup">
-                    <img src="images/portfolio/tetco.ly_.png" alt="TETCO">
-                    <div class="mockup-badge">WEB</div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>TETCO</h3>
-                    <p>منصة شركة رقمية متطورة</p>
-                </div>
-            </a>
-
-            <a href="https://ofifice-alalem.github.io/alaouda-deploy/" target="_blank" class="portfolio-card">
-                <div class="portfolio-mockup">
-                    <img src="images/portfolio/العودة.png" alt="العودة">
-                    <div class="mockup-badge">UI/UX</div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>العودة</h3>
-                    <p>تصميم موقع تجاري عصري</p>
-                </div>
-            </a>
-
-            <a href="https://ofifice-alalem.github.io/Yaseen-v2/" target="_blank" class="portfolio-card">
-                <div class="portfolio-mockup">
-                    <img src="images/portfolio/النخلة.png" alt="ياسين">
-                    <div class="mockup-badge">WEB</div>
-                </div>
-                <div class="portfolio-info">
-                    <h3>ياسين</h3>
-                    <p>موقع ويب تفاعلي متقدم</p>
-                </div>
-            </a>
+                        <div class="portfolio-info">
+                            <h3>Sipes</h3>
+                            <p>موقع شركة احترافي متكامل</p>
                         </div>
-                    </div>
+                    </a>
+                    <a href="https://sipes.ly/" target="_blank" class="portfolio-card">
+                        <div class="portfolio-mockup">
+                            <img src="images/portfolio/sipes.ly.png" alt="Sipes">
+                            <div class="mockup-badge">WEB</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Sipes</h3>
+                            <p>موقع شركة احترافي متكامل</p>
+                        </div>
+                    </a>
+
+                    <a href="https://tetco.ly/" target="_blank" class="portfolio-card">
+                        <div class="portfolio-mockup">
+                            <img src="images/portfolio/tetco.ly_.png" alt="TETCO">
+                            <div class="mockup-badge">WEB</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>TETCO</h3>
+                            <p>منصة شركة رقمية متطورة</p>
+                        </div>
+                    </a>
+
+                    <a href="https://ofifice-alalem.github.io/alaouda-deploy/" target="_blank" class="portfolio-card">
+                        <div class="portfolio-mockup">
+                            <img src="images/portfolio/العودة.png" alt="العودة">
+                            <div class="mockup-badge">UI/UX</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>العودة</h3>
+                            <p>تصميم موقع تجاري عصري</p>
+                        </div>
+                    </a>
+
+                    <a href="https://ofifice-alalem.github.io/Yaseen-v2/" target="_blank" class="portfolio-card">
+                        <div class="portfolio-mockup">
+                            <img src="images/portfolio/النخلة.png" alt="ياسين">
+                            <div class="mockup-badge">WEB</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>ياسين</h3>
+                            <p>موقع ويب تفاعلي متقدم</p>
+                        </div>
+                    </a>
                 </div>
+            </div>
+        </div>
     </section>
 
 </body>

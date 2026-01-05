@@ -1,0 +1,175 @@
+/* CSS خاص بقسم الخدمات */
+.services {
+    padding: 2rem 0;
+}
+.cards-container {
+    display: flex;
+    gap: 1rem;
+}
+.card {
+    flex: 1;
+}
+
+/* Sections wrapper and services styles */
+.sections-wrapper {
+    position: relative;
+    direction: rtl;
+    padding: 80px 20px;
+    overflow: hidden;
+    background: white;
+}
+
+.sections-bg-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.12;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sections-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top left, rgba(102, 126, 234, 0.15), transparent 60%);
+    z-index: 1;
+}
+
+.sections-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at bottom right, rgba(118, 75, 162, 0.15), transparent 60%);
+    z-index: 1;
+}
+
+.services {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.services-title {
+    position: relative;
+    z-index: 2;
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+    background:linear-gradient(45deg, #2497db, #133986, #667eea);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+.services-title::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 10px;
+}
+
+.services-title::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #764ba2, #667eea);
+    border-radius: 10px;
+}
+
+.services-subtitle {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+.cards-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.card {
+    width: 280px;
+    border-radius: 20px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 5px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card .top-section {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #00d4ff 0%, #00b8d4 100%);
+    position: relative;
+    border-radius: 20px;
+}
+
+.card .logo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.card img {
+    width: 120px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.card .bottom-section {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.card .title {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #134288;
+    margin-bottom: 15px;
+}
+
+.card .sub-title {
+    display: block;
+    font-size: 0.95rem;
+    color: #165099;
+    line-height: 1.7;
+}
