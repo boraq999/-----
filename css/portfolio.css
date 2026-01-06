@@ -3,10 +3,10 @@
     position: relative;
     direction: rtl;
     padding: 100px 20px;
-    background: white;
+    background: #fefcff;
     border-top: 3px solid ;
     border-color: #00b8d4;
-    
+
 }
 
 .portfolio-bg-pattern {
@@ -21,11 +21,13 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: white;
+    background: #fefcff;
     pointer-events: none;
     overflow: hidden;
-    background: url('../images/background.png') center/cover no-repeat;
-    /* background-color: #0F0E10; */
+    background-image:
+        radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%),
+        radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%);
+    background-repeat: no-repeat;
 
 }
 
