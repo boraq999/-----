@@ -6,6 +6,7 @@
     background: white;
     border-top: 3px solid ;
     border-color: #00b8d4;
+    
 }
 
 .portfolio-bg-pattern {
@@ -23,6 +24,9 @@
     background: white;
     pointer-events: none;
     overflow: hidden;
+    background: url('../images/background.png') center/cover no-repeat;
+    /* background-color: #0F0E10; */
+
 }
 
 
@@ -254,7 +258,7 @@ body.dark .fill-blue-700 {
     position: relative;
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     /* two cards per row */
     gap: 18px;
     max-width: 1000px;
@@ -267,6 +271,7 @@ body.dark .fill-blue-700 {
     grid-template-columns: 1fr 1.6fr;
     gap: 40px;
     align-items: start;
+
     max-width: 1200px;
     margin: 0 auto 20px auto;
     direction: ltr;
@@ -281,7 +286,7 @@ body.dark .fill-blue-700 {
     align-items: flex-start;
     padding-right: 12px;
     position: sticky;
-    top: 100px;
+    top: 150px;
 }
 
 .portfolio-left .portfolio-header {
@@ -313,7 +318,7 @@ body.dark .fill-blue-700 {
 
 .portfolio-mockup {
     position: relative;
-    height: 380px;
+    height: 200px;
     background: white;
     display: flex;
     align-items: center;
