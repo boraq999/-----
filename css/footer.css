@@ -1,0 +1,400 @@
+/* ========================================
+   Footer Styles - تصميم الفوتر
+   ======================================== */
+
+.footer {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #fff;
+    padding: 80px 0 0;
+    overflow: hidden;
+}
+
+/* خلفية متحركة بنمط سداسي */
+.footer-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* المحتوى الرئيسي */
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* الشبكة الرئيسية */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+/* قسم الشركة */
+.footer-company {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo-section img {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 4px 12px rgba(102, 126, 234, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.footer-logo-section img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.footer-brand-name {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-description {
+    color: #b8c5d6;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* أيقونات التواصل الاجتماعي */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    border-color: transparent;
+}
+
+/* أقسام الروابط */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+}
+
+.footer-links li a {
+    color: #b8c5d6;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links li a::before {
+    content: '←';
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #fff;
+    padding-right: 10px;
+}
+
+.footer-links li a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* قسم النشرة البريدية */
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.newsletter-text {
+    color: #b8c5d6;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.newsletter-input {
+    padding: 15px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Tajawal', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.newsletter-input::placeholder {
+    color: #7a8a9e;
+}
+
+.newsletter-input:focus {
+    border-color: #667eea;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.newsletter-btn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.newsletter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.newsletter-btn:active {
+    transform: translateY(0);
+}
+
+/* معلومات الاتصال */
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #b8c5d6;
+    font-size: 0.95rem;
+}
+
+.contact-item i {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 8px;
+    color: #667eea;
+    font-size: 1rem;
+}
+
+.contact-item a {
+    color: #b8c5d6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #fff;
+}
+
+/* خط الفاصل */
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.1) 20%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.1) 80%,
+            transparent 100%);
+    margin: 40px 0 30px;
+}
+
+/* قسم الحقوق */
+.footer-bottom {
+    padding: 30px 40px;
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.footer-bottom-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright {
+    color: #b8c5d6;
+    font-size: 0.95rem;
+}
+
+.footer-copyright strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.footer-bottom-links a {
+    color: #b8c5d6;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #fff;
+}
+
+/* تأثيرات متحركة */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.footer-logo-section img {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* استجابة للشاشات المتوسطة */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-company {
+        grid-column: 1 / -1;
+    }
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 0 0;
+    }
+
+    .footer-content {
+        padding: 0 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-company {
+        grid-column: 1;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* استجابة للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    .footer-brand-name {
+        font-size: 1.5rem;
+    }
+
+    .footer-section-title {
+        font-size: 1.1rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}

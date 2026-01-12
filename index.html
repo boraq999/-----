@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/clients.css">
     <link rel="stylesheet" href="css/sections.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/bg-color.css">
+    <link rel="stylesheet" href="css/footer.css">
 
 </head>
 
@@ -202,21 +204,19 @@
     </section>
 
     <section class="portfolio">
-        <div class="portfolio-bg-ripple">
-            <div class="stripe-overlay"
-                style="background-image: repeating-linear-gradient(-45deg, #3b82f6 0px, #3b82f6 1px, transparent 1px, transparent 10px, #8b5cf6 10px, #8b5cf6 11px, transparent 11px, transparent 20px, #ec4899 20px, #ec4899 21px, transparent 21px, transparent 30px); background-size: 42.4px 42.4px;">
-            </div>
-            <div class="portfolio-radial-overlay"></div>
+        <div class="bg1-bg-ripple">
+            <div class="stripe-overlay"></div>
+            <div class="bg1-radial-overlay"></div>
         </div>
 
         <div class="portfolio-content">
 
-                <div class="portfolio-left">
-                    <div class="portfolio-header">
-                        <h2 class="portfolio-title">أعمالنا</h2>
-                        <p class="portfolio-subtitle">نماذج مختارة من مشاريعنا الرقمية — جودة، تصميم ونتائج ملموسة</p>
-                    </div>
+            <div class="portfolio-left">
+                <div class="portfolio-header">
+                    <h2 class="portfolio-title">أعمالنا</h2>
+                    <p class="portfolio-subtitle">نماذج مختارة من مشاريعنا الرقمية — جودة، تصميم ونتائج ملموسة</p>
                 </div>
+            </div>
 
             <div class="portfolio-right">
                 <div class="portfolio-grid">
@@ -297,9 +297,164 @@
         </div>
 
 
-    </div>
+        </div>
     </section>
 
+    <!-- Contact Us Section -->
+    <section class="contact-us">
+        <div class="contact-container">
+            <div class="contact-left">
+                <img class="contact-illustration" src="images/contact/contact.png" alt="لوحة تواصل" />
+                <div class="contact-info">
+                    <h3>تواصل معنا</h3>
+                    <p>نحن هنا لمساعدتك — أرسل رسالة وسنعاود الرد خلال 24 ساعة.</p>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> <strong>هاتف:</strong> +218 91 123 4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>الموقع:</strong> طرابلس، ليبيا</li>
+                        <li><i class="fas fa-clock"></i> <strong>ساعات العمل:</strong> 9ص - 6م</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <h2 class="contact-title">هل أنت مستعد للبدء؟</h2>
+                <p class="contact-sub">أخبرنا عن مشروعك، وسنتواصل سريعًا.</p>
+
+                <div class="contact-actions" role="region" aria-label="خيارات التواصل">
+                    <p class="contact-note">هل تود التواصل مباشرةً؟ اختر إحدى الطرق التالية:</p>
+
+                    <div class="action-buttons">
+                        <a class="btn-primary contact-cta" href="mailto:support@alaouda.ly"
+                            aria-label="أرسل عبر البريد الإلكتروني">أرسل عبر البريد</a>
+                        <a class="btn-secondary" href="tel:+218911234567" aria-label="اتصل الآن">اتصل الآن</a>
+                        <a class="btn-secondary" href="https://wa.me/218911234567" target="_blank" rel="noopener"
+                            aria-label="محادثة واتساب">واتساب</a>
+                    </div>
+
+                    <p class="contact-small">أو تواصل معنا عبر الهاتف: <a href="tel:+218911234567">+218 91 123 4567</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- خلفية متحركة -->
+        <svg class="footer-bg-pattern" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="footer-hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse"
+                    patternTransform="scale(2)">
+                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" fill="none" stroke="#667eea"
+                        stroke-width="1" opacity="0.2" />
+                    <path d="M25 0 L50 14.4 L50 38.4 L25 51.8 L0 38.4 L0 14.4 Z" transform="translate(50, 25.9)"
+                        fill="none" stroke="#764ba2" stroke-width="1" opacity="0.2" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#footer-hexagons)" />
+        </svg>
+
+        <div class="footer-content">
+            <div class="footer-grid">
+                <!-- قسم الشركة -->
+                <div class="footer-company">
+                    <div class="footer-logo-section">
+                        <img src="images/LOGO.png" alt="لوغو تقنية">
+                        <h3 class="footer-brand-name">تقنية</h3>
+                    </div>
+                    <p class="footer-description">
+                        نحن شركة رائدة في مجال التقنية والتطوير الرقمي، نقدم حلولاً مبتكرة ومتطورة لعملائنا في جميع
+                        أنحاء العالم. نسعى دائماً لتحقيق التميز والابتكار في كل ما نقدمه.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="فيسبوك">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="تويتر">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="إنستغرام">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="لينكد إن">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="يوتيوب">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- روابط سريعة -->
+                <div class="footer-section">
+                    <h4 class="footer-section-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#landing">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#portfolio">أعمالنا</a></li>
+                        <li><a href="#how-we-work">كيف نعمل</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- خدماتنا -->
+                <div class="footer-section">
+                    <h4 class="footer-section-title">خدماتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">استضافة سحابية</a></li>
+                        <li><a href="#">تصميم UI/UX</a></li>
+                        <li><a href="#">تطوير المواقع</a></li>
+                        <li><a href="#">تطبيقات الجوال</a></li>
+                        <li><a href="#">تحسين محركات البحث</a></li>
+                    </ul>
+                </div>
+
+                <!-- النشرة البريدية -->
+                <div class="footer-newsletter">
+                    <h4 class="footer-section-title">اشترك في نشرتنا</h4>
+                    <p class="newsletter-text">
+                        احصل على آخر الأخبار والعروض الحصرية مباشرة في بريدك الإلكتروني
+                    </p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('شكراً لاشتراكك!');">
+                        <input type="email" class="newsletter-input" placeholder="بريدك الإلكتروني" required
+                            aria-label="البريد الإلكتروني للاشتراك">
+                        <button type="submit" class="newsletter-btn">اشترك الآن</button>
+                    </form>
+
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+218911234567">+218 91 123 4567</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@taqnia.ly">info@taqnia.ly</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>طرابلس، ليبيا</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+        </div>
+
+        <!-- قسم الحقوق -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="footer-copyright">
+                    © 2026 <strong>تقنية</strong> - جميع الحقوق محفوظة
+                </p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                    <li><a href="#">الشروط والأحكام</a></li>
+                    <li><a href="#">سياسة الاستخدام</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
