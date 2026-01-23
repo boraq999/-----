@@ -1,0 +1,408 @@
+/* ========================================
+   Header Styles - تصميم الهيدر
+   ======================================== */
+
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 80px);
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 35px;
+    background: rgba(26, 26, 46, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 1000;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+    /* ------------------------------------------------*/
+    background: rgba(0, 0, 0, 0.11);
+    /* background: transparent; */
+    overflow: hidden;
+    width: 80%;
+    /* ------------------------------------------------*/
+
+
+}
+
+/* تأثير عند التمرير */
+header.scrolled {
+    top: 15px;
+    padding: 15px 35px;
+    background: rgba(252, 252, 252, 0.973);
+    border-color: rgba(102, 126, 234, 0.3);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+    a{
+        color: red;
+    }
+
+}
+
+/* خط متدرج في الأعلى */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            #667eea 25%,
+            #764ba2 50%,
+            #667eea 75%,
+            transparent 100%);
+    background-size: 200% 100%;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+/* حاوية الهيدر */
+.header-container {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* قسم اللوغو */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+.header-logo img {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 4px 12px rgba(102, 126, 234, 0.4));
+    transition: all 0.3s ease;
+}
+
+.header-logo:hover img {
+    filter: drop-shadow(0 6px 16px rgba(118, 75, 162, 0.6));
+    transform: rotate(5deg);
+}
+
+.header-brand-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+}
+
+/* قائمة التنقل */
+nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+nav a {
+    color: red;
+    color: #164995;
+    color: #b8c5d6;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تأثير الخلفية عند التمرير */
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+nav a:hover::before {
+    left: 0;
+}
+
+nav a:hover {
+    color: #fff;
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+/* خط سفلي متحرك */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* الرابط النشط */
+nav a.active {
+    color: #fff;
+    background: rgba(102, 126, 234, 0.15);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+nav a.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* زر الاتصال */
+.header-cta {
+    margin-right: 20px;
+    padding: 12px 30px !important;
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    background:linear-gradient(135deg, #667eea78, #764ba252) !important;
+    color: white !important;
+    border: none;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: inset 0 4px 15px rgb(102 126 234 / 82%);
+    font-weight: 600;
+}
+
+.header-cta::before {
+    background: linear-gradient(135deg, #764ba2, #667eea) !important;
+}
+
+.header-cta:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.header-cta::after {
+    display: none;
+}
+
+/* زر القائمة للموبايل */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn span {
+    width: 28px;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover span {
+    background: linear-gradient(90deg, #764ba2, #667eea);
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* استجابة للشاشات المتوسطة */
+@media (max-width: 1024px) {
+    header {
+        width: calc(100% - 60px);
+        padding: 18px 35px;
+    }
+
+    header.scrolled {
+        padding: 14px 30px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+
+    .header-cta {
+        padding: 10px 24px !important;
+        margin-right: 15px;
+    }
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    header {
+        width: calc(100% - 40px);
+        padding: 15px 20px;
+        top: 15px;
+        border-radius: 16px;
+    }
+
+    header.scrolled {
+        padding: 12px 18px;
+        top: 10px;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 90px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 110px);
+        flex-direction: column;
+        gap: 0;
+        background: rgba(26, 26, 46, 0.98);
+        backdrop-filter: blur(20px);
+        padding: 30px 20px;
+        border: 1px solid rgba(102, 126, 234, 0.2);
+        border-radius: 16px;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        transition: right 0.4s ease;
+        overflow-y: auto;
+    }
+
+    nav.active {
+        right: 20px;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 15px 20px;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        text-align: right;
+    }
+
+    nav a::after {
+        display: none;
+    }
+
+    .header-cta {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .header-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-brand-name {
+        font-size: 1.5rem;
+    }
+}
+
+/* استجابة للشاشات الصغيرة جداً */
+@media (max-width: 480px) {
+    header {
+        width: calc(100% - 30px);
+        padding: 12px 15px;
+        top: 10px;
+        border-radius: 14px;
+    }
+
+    .header-logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header-brand-name {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        width: calc(100% - 40px);
+        right: -100%;
+        top: 80px;
+        height: calc(100vh - 100px);
+    }
+
+    nav.active {
+        right: 20px;
+    }
+
+    .mobile-menu-btn span {
+        width: 24px;
+    }
+}
+
+/* تأثير overlay عند فتح القائمة على الموبايل */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+@media (min-width: 769px) {
+    .mobile-overlay {
+        display: none !important;
+    }
+}

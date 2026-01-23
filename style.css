@@ -1,3 +1,7 @@
+/* ========================================
+   Global Styles - الأنماط العامة
+   ======================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,61 +11,56 @@
 
 body {
     font-family: 'Tajawal', sans-serif;
+    overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* تحسين الأداء للرسوم المتحركة */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* تحسين الأداء للعناصر المتحركة */
+.landing,
+.footer,
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px 80px;
-    background: transparent;
-    z-index: 1000;
+    will-change: transform;
 }
 
-
-
-nav {
-    display: flex;
-    gap: 40px;
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 25px;
-    transition: all 0.3s ease;
-    position: relative;
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
 }
 
-nav a:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 5px;
 }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    width: 60%;
-    height: 2px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
-    transition: transform 0.3s ease;
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
 }
 
-nav a:hover::after {
-    transform: translateX(-50%) scaleX(1);
+/* Selection Color */
+::selection {
+    background: rgba(102, 126, 234, 0.3);
+    color: #fff;
 }
 
- 
+::-moz-selection {
+    background: rgba(102, 126, 234, 0.3);
+    color: #fff;
+}
 
+/* Animations */
 @keyframes gradientShift {
 
     0%,
@@ -71,5 +70,58 @@ nav a:hover::after {
 
     50% {
         background-position: 100% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(102, 126, 234, 0.3);
+    border-radius: 50%;
+    border-top-color: #667eea;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
