@@ -7,42 +7,29 @@ header {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 80px);
+    width: 80%;
     max-width: 1400px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px 35px;
-    background: rgba(26, 26, 46, 0.85);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
-    transition: all 0.4s ease;
-    border: 1px solid rgba(102, 126, 234, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(19, 57, 134, 0.1);
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-
-    /* ------------------------------------------------*/
-    background: rgba(0, 0, 0, 0.11);
-    /* background: transparent; */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    width: 80%;
-    /* ------------------------------------------------*/
-
-
 }
 
 /* تأثير عند التمرير */
 header.scrolled {
     top: 15px;
-    padding: 15px 35px;
-    background: rgba(252, 252, 252, 0.973);
-    border-color: rgba(102, 126, 234, 0.3);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
-    a{
-        color: #6b6ed4;
-    }
-
+    background: rgba(255, 255, 255, 0.98);
+    border-color: rgba(36, 151, 219, 0.2);
+    box-shadow: 0 15px 50px rgba(19, 57, 134, 0.1);
 }
 
 /* خط متدرج في الأعلى */
@@ -127,9 +114,7 @@ nav {
 }
 
 nav a {
-    color: red;
-    color: #164995;
-    color: #b8c5d6;
+    color: #1a3a6c;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
@@ -197,7 +182,7 @@ nav a.active::after {
     margin-right: 20px;
     padding: 12px 30px !important;
     background: linear-gradient(135deg, #667eea, #764ba2) !important;
-    background:linear-gradient(135deg, #667eea78, #764ba252) !important;
+    background: linear-gradient(135deg, #667eea78, #764ba252) !important;
     color: white !important;
     border: none;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
@@ -306,12 +291,12 @@ nav a.active::after {
         height: calc(100vh - 110px);
         flex-direction: column;
         gap: 0;
-        background: rgba(26, 26, 46, 0.98);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         padding: 30px 20px;
-        border: 1px solid rgba(102, 126, 234, 0.2);
+        border: 1px solid rgba(19, 57, 134, 0.1);
         border-radius: 16px;
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        box-shadow: -10px 10px 40px rgba(0, 0, 0, 0.1);
         transition: right 0.4s ease;
         overflow-y: auto;
     }
