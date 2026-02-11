@@ -11,12 +11,14 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
+    gap: 30px;
 }
 
 .trust-signals {
     font-size: 2.1rem;
     color: #666;
     font-weight: 900;
+    white-space: nowrap;
 }
 
 .trust-signals span {
@@ -31,11 +33,13 @@
 .clients-logos {
     display: flex;
     align-items: center;
-    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
 }
 
 .clients-logos img {
-    height: 50px;
+    height: 45px;
     width: auto;
     opacity: 0.7;
     filter: grayscale(100%);
@@ -45,4 +49,49 @@
 .clients-logos img:hover {
     opacity: 1;
     filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* التجاوب */
+@media (max-width: 1024px) {
+    .clients-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .clients-logos {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trust-signals {
+        font-size: 1.8rem;
+    }
+
+    .clients-logos {
+        gap: 30px;
+    }
+
+    .clients-logos img {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trust-signals {
+        font-size: 1.5rem;
+    }
+
+    .clients-logos {
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .clients-logos img {
+        height: 30px;
+    }
 }

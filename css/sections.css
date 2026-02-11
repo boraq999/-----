@@ -291,6 +291,15 @@
     font-weight: 400;
 }
 
+@media (max-width: 900px) {
+    .why-us{
+        flex-direction: column;
+    }
+    .why-us-cards-container{
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ------------------------- تواصل معنا ------------------------- */
 .contact-us {
     position: relative;

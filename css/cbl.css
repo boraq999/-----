@@ -147,11 +147,18 @@
         flex-direction: column;
         text-align: center;
         gap: 50px;
+        align-items: center;
     }
 
     .cbl-image-content {
         order: 1;
+        position: relative;
+        top: 0;
         /* Keep image on top on mobile */
+    }
+
+    .cbl-image-content img {
+        width: 70%;
     }
 
     .cbl-text-content {

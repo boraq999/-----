@@ -540,24 +540,17 @@
             const landingHeight = landingSection ? landingSection.offsetHeight : 0;
 
             // Add scrolled class after 100px
-            if (currentScroll > landingHeight - 100) {
+            if (currentScroll > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
 
-            // Hide/Show logo based on landing section
-            if (landingSection && headerLogo) {
-                // Hide logo when in landing section (with some offset)
-                if (currentScroll < landingHeight - 100) {
-                    headerLogo.style.opacity = '0';
-                    headerLogo.style.transform = 'translateX(20px)';
-                    headerLogo.style.pointerEvents = 'none';
-                } else {
-                    headerLogo.style.opacity = '1';
-                    headerLogo.style.transform = 'translateX(0)';
-                    headerLogo.style.pointerEvents = 'auto';
-                }
+            // Simple Logo visibility (always show or show after scroll)
+            if (headerLogo) {
+                headerLogo.style.opacity = '1';
+                headerLogo.style.transform = 'translateX(0)';
+                headerLogo.style.pointerEvents = 'auto';
             }
 
             lastScroll = currentScroll;
