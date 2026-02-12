@@ -51,12 +51,6 @@
     <section class="landing">
         <div class="landing-grid"></div>
         <div class="landing-content">
-            <div class="landing-visual">
-                <div class="logo-ring ring-1"></div>
-                <div class="logo-ring ring-2"></div>
-                <div class="logo-ring ring-3"></div>
-                <img src="../images/LOGO.png" alt="تقنية" class="main-logo">
-            </div>
             <div class="landing-text">
                 <div class="badge">
                     <span class="badge-dot"></span>
@@ -94,20 +88,58 @@
                     </div>
                 </div>
             </div>
+            <div class="landing-visual">
+                <div class="logo-ring ring-1"></div>
+                <div class="logo-ring ring-2"></div>
+                <div class="logo-ring ring-3"></div>
+                <img src="../images/LOGO.png" alt="تقنية" class="main-logo">
+            </div>
         </div>
     </section>
 
-    <section class="clients-banner">
-        <div class="clients-track">
-            <div class="clients-logos">
-                <img src="../images/cline/sipes-logo.png" alt="Sipes">
-                <img src="../images/cline/TETCO-ENGLISH-e1732365158152.png" alt="TETCO">
-                <img src="../images/cline/العودة.png" alt="العودة">
-                <img src="../images/cline/النخلة.png" alt="النخلة">
-                <img src="../images/cline/sipes-logo.png" alt="Sipes">
-                <img src="../images/cline/TETCO-ENGLISH-e1732365158152.png" alt="TETCO">
-                <img src="../images/cline/العودة.png" alt="العودة">
-                <img src="../images/cline/النخلة.png" alt="النخلة">
+    <section class="partners-section">
+        <div class="partners-container">
+            <div class="partners-header">
+                <span class="section-badge">شركاء النجاح</span>
+                <h2 class="partners-title">نفتخر بثقة <span class="gradient-text">كبرى الشركات</span></h2>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="../images/cline/sipes-logo.png" alt="Sipes">
+                    </div>
+                    <div class="partner-info">
+                        <h4>Sipes</h4>
+                        <span>شريك استراتيجي</span>
+                    </div>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="../images/cline/TETCO-ENGLISH-e1732365158152.png" alt="TETCO">
+                    </div>
+                    <div class="partner-info">
+                        <h4>TETCO</h4>
+                        <span>شريك موثوق</span>
+                    </div>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="../images/cline/العودة.png" alt="العودة">
+                    </div>
+                    <div class="partner-info">
+                        <h4>العودة</h4>
+                        <span>شريك مميز</span>
+                    </div>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="../images/cline/النخلة.png" alt="النخلة">
+                    </div>
+                    <div class="partner-info">
+                        <h4>النخلة</h4>
+                        <span>شريك رائد</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -502,14 +534,14 @@
             mobileMenuBtn.classList.toggle('active');
             nav.classList.toggle('active');
             mobileOverlay.classList.toggle('active');
-            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+            document.body.classList.toggle('menu-open');
         });
 
         mobileOverlay.addEventListener('click', () => {
             mobileMenuBtn.classList.remove('active');
             nav.classList.remove('active');
             mobileOverlay.classList.remove('active');
-            document.body.style.overflow = '';
+            document.body.classList.remove('menu-open');
         });
 
         // Header scroll effect
@@ -536,7 +568,7 @@
                     mobileMenuBtn.classList.remove('active');
                     nav.classList.remove('active');
                     mobileOverlay.classList.remove('active');
-                    document.body.style.overflow = '';
+                    document.body.classList.remove('menu-open');
                 }
             });
         });

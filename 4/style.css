@@ -335,6 +335,302 @@ body.menu-open {
     opacity: 1;
 }
 
+/* Hero من التصميم 3 */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 5% 100px;
+    position: relative;
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text {
+    text-align: right;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 24px;
+    background: var(--bg-card);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 100px;
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 24px;
+}
+
+.tag-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+}
+
+.headline {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.subheadline {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.accent-text {
+    color: var(--accent);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-main {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-ghost:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.metrics {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-num {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.metric-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+}
+
+.hero-media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-frame {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.frame-ring {
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ring-1 {
+    width: 350px;
+    height: 350px;
+    border-top-color: var(--primary);
+    border-right-color: var(--accent);
+    animation: spin 10s linear infinite;
+}
+
+.ring-2 {
+    width: 420px;
+    height: 420px;
+    border-bottom-color: var(--primary-light);
+    border-left-color: var(--primary-dark);
+    animation: spin 15s linear infinite reverse;
+}
+
+.ring-3 {
+    width: 300px;
+    height: 300px;
+    border: 1px dashed var(--accent);
+    animation: spin 20s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.main-visual {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 280px;
+    filter: drop-shadow(0 0 40px rgba(99, 102, 241, 0.3));
+    animation: floatVisual 6s ease-in-out infinite;
+}
+
+@keyframes floatVisual {
+    0%, 100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+}
+
+.orbit-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: var(--bg-card);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.orbit-badge i {
+    color: var(--accent);
+}
+
+.badge-1 {
+    top: 20%;
+    left: 0;
+    animation: orbit1 8s ease-in-out infinite;
+}
+
+.badge-2 {
+    bottom: 20%;
+    right: 0;
+    animation: orbit2 8s ease-in-out infinite;
+}
+
+@keyframes orbit1 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, -15px);
+    }
+}
+
+@keyframes orbit2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-10px, 15px);
+    }
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.hint-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+    animation: linePulse 2s infinite;
+}
+
+.scroll-hint span {
+    font-size: 0.8rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes linePulse {
+    0%, 100% {
+        opacity: 1;
+        height: 60px;
+    }
+    50% {
+        opacity: 0.5;
+        height: 40px;
+    }
+}
+
 /* Landing Section */
 .landing {
     min-height: 100vh;
@@ -829,7 +1125,58 @@ section {
     color: white;
 }
 
-/* Services Section */
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Section Styles */
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-header.centered {
+    text-align: center;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--bg-card);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 100px;
+    margin-bottom: 16px;
+}
+
+.section-heading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.gradient-word {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-lead {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+}
+
+.section-header.centered .section-lead {
+    margin: 0 auto;
+}
+
+/* Services */
 .services {
     padding: 120px 5%;
     position: relative;
@@ -965,6 +1312,262 @@ section {
 
 .service-features i {
     color: var(--accent);
+}
+
+/* Services من التصميم 3 */
+.services {
+    padding: 120px 0;
+    background: var(--bg-darker);
+    position: relative;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-tile {
+    position: relative;
+    padding: 40px 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    text-align: center;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.service-tile:hover {
+    border-color: var(--primary);
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+.tile-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.service-tile:hover .tile-glow {
+    opacity: 1;
+}
+
+.featured-ribbon {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    width: 150px;
+    padding: 6px 0;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    transform: rotate(45deg);
+    text-align: center;
+}
+
+.tile-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 24px;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.tile-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.tile-desc {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+}
+
+.tile-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.tile-tags span {
+    padding: 6px 14px;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    color: var(--accent);
+}
+
+/* Features من التصميم 3 */
+.features {
+    padding: 120px 0;
+}
+
+.features-matrix {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.feature-block {
+    padding: 40px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.feature-block:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+}
+
+.block-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 16px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.feature-block h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.feature-block p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Portfolio من التصميم 3 */
+.portfolio {
+    padding: 120px 0;
+    background: var(--bg-darker);
+}
+
+.portfolio-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.showcase-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.showcase-item:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+}
+
+.showcase-item.main {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item-frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.item-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.showcase-item:hover .item-frame img {
+    transform: scale(1.1);
+}
+
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.showcase-item:hover .item-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.item-cat {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--accent);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.item-overlay h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.item-overlay i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: var(--bg-dark);
+    border-radius: 50%;
+    font-size: 1rem;
 }
 
 /* Why Us Section */
