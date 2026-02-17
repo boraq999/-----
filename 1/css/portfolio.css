@@ -37,7 +37,7 @@ section.portfolio {
 
 .portfolio-item {
     position: sticky;
-    top: 140px;
+    top: 60px;
 
     border-radius: 32px;
     overflow: hidden;
